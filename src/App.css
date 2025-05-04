@@ -7,13 +7,15 @@
 
 nav {
   position: fixed;
-  display: inline-block;
+  display: flex;
   top: 5%; 
   left : 50%;
   transform: translate(-50%);
   text-align: center;
   border-radius: 1em;
   color: white; 
+  gap: 0.1em;
+  white-space: nowrap;
 }
 
 nav > a {
