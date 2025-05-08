@@ -13,7 +13,8 @@ function ExtendedNav({ to, label }) {
     >
       {({ isActive }) => (
         <span className={isActive ? "active" : ""}>
-          {isHovered || isActive ? label : label[0]}
+          {/*isHovered || isActive ? label : label[0]*/}
+          {label}
         </span>
       )}
     </NavLink>

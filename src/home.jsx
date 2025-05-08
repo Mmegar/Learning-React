@@ -9,7 +9,7 @@ function Home() {
   return (
     <>
 
-      <h1>Hello, this is the home page</h1>
+      <h1>hello b Phanith, Viny, Mana</h1>
 
     </>
   );
