@@ -8,11 +8,13 @@ import ExtendedNav from './extendednav.jsx'
 
 function App() {
   const location = useLocation(); 
+  
+  let isValentine_page = location.pathname == "./valentine"
 
   return (
     <>
       <div>
-        <nav> 
+        <nav className={`${isValentine_page ? 'nav-valentine' : ''}`}> 
           <ExtendedNav to="/" label="Home"> </ExtendedNav>
           <ExtendedNav to="/about" label="About"> </ExtendedNav>
           <ExtendedNav to="/valentine" label="Project Valentine"> </ExtendedNav>

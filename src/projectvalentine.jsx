@@ -1,7 +1,28 @@
- import './App.css'
+import './App.css'
+import { useEffect } from 'react'
 
 function ProjectValentine() {
-    return <h1>This is a home page </h1>
-}
+    useEffect(() => {
+        
+        document.body.style.color = "black"
+        document.body.style.background = "#FBF7F5"
+    
+    return () => {[
+        document.body.style.background = "",
+        document.body.style.color = ""]}
+    })
+    
+return (
+    
+    <> 
 
+        
+        <h1 className={'styles.subtitle'}> WILL YOU BE MY GIRLFRIEND?</h1>
+
+        <p> Yes </p>
+        <p> No </p>
+
+    </>
+)}
+     
 export default ProjectValentine

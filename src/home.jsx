@@ -9,7 +9,7 @@ function Home() {
   return (
     <>
 
-      <h1>hello b Phanith, Viny, Mana</h1>
+      <h1>Hello there, give likes and comments, im new to this video content stuff.</h1>
 
     </>
   );
