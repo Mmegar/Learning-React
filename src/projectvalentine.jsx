@@ -4,6 +4,9 @@ import flirty_people from './assets/flirts.webp'
 import Clickable from './clickable.jsx'
 import styles from './clickable.module.css';
 
+import maomao from './assets/maomao.PNG';
+import masterjinshi from './assets/masterjinshi.PNG';
+
 function ProjectValentine() {
 
     useEffect(() => {
@@ -29,6 +32,17 @@ return (
             <Clickable label="yes" property="yes" className={styles.yesBtn} />
             <Clickable label="EW WHO ARE U" property="no" className={styles.noBtn} />
         </div>  
+
+        <div
+  className="valentine-background"
+  style={{
+    backgroundImage: `url(${maomao}), url(${masterjinshi})`,
+    backgroundPosition: '0% 100%, 100% 100%',
+    backgroundSize: '50%, 50%',
+    backgroundRepeat: 'no-repeat, no-repeat',
+    backgroundColor: '#FBF7F5',
+  }}
+/>
          
     </>
 )}
