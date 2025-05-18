@@ -2,13 +2,13 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 3rem;
-  text-align: center;
+
 }
 
 nav {
   position: fixed;
   display: flex;
-  top: 5%; 
+  top: 3%; 
   left : 50%;
   transform: translate(-50%);
   text-align: center;
@@ -40,11 +40,42 @@ nav > a.active {
   opacity: 1;
   transition: all 0.2s ease;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.4); 
+}
 
-  
+.subtitle{
+  font-size: 2.5vw;
+  font-family: 'Courier New', Courier, monospace;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 10%);
+}
+
+.image-wrapper {
+  height: 200px; /* or whatever fits your largest image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 2rem; /* add space below image */
+  transform:translate(0%, -15%) 
+}
+.imageSize {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 
 
+.valentine-background{
+  background: 
+    url('./assets/maomao.PNG'),
+    url('./assets/masterjinshi.PNG'),
+    #FBF7F5;
+  background-position: 0% 100%, 100% 100%;  
+  background-size: 50%, 50%;
+  background-repeat: no-repeat, no-repeat;
+}
 
 
