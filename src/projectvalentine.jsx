@@ -2,7 +2,7 @@ import './App.css'
 import { useEffect } from 'react'
 import flirty_people from './assets/flirts.webp'
 import maomao from './assets/maomao.webp'
-import masterJinshi from './assets/masterJinshi.PNG'
+import masterJinshi from './assets/masterJinshi.webp'
 import Clickable from './clickable.jsx'
 import styles from './clickable.module.css';
 import maomaoPlease from "./assets/maomoaPlease.webp"
