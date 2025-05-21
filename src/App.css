@@ -2,7 +2,6 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 3rem;
-
 }
 
 nav {
@@ -43,12 +42,35 @@ nav > a.active {
 }
 
 .subtitle{
-  font-size: 2.5vw;
   font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: clamp(20px, 3vw, 40px);
+}
+
+
+
+.maomao-background {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 10%);
+  bottom: 0;
+  left: 0;
+  width: 850px;            /* fixed width so it doesn’t shrink */
+  max-width: 10000px;
+  height: auto;
+  transition: left 0.3s ease;
+  z-index: 0;
+}
+
+.jinshi-background {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 800px;            /* fixed width so it doesn’t shrink */
+  max-width: 10000px;
+  height: auto;
+  transition: right 0.3s ease;
+  z-index: 1;
+
 }
 
 .image-wrapper {
@@ -67,7 +89,7 @@ nav > a.active {
 }
 
 
-
+/*
 .valentine-background{
   background: 
     url('./assets/maomao.webp'),
@@ -77,5 +99,19 @@ nav > a.active {
   background-size: 50%, 50%;
   background-repeat: no-repeat, no-repeat;
 }
+*/
 
+@media (max-width: 768px) {
+  .maomao-background {
+    left: 0vw; 
+    width: 100vw;            /* fixed width so it doesn’t shrink */
+    max-width: 10000px;
 
+  }
+
+  .jinshi-background {
+    right: 0vw;
+    width: 100vw;            /* fixed width so it doesn’t shrink */
+    max-width: 10000px;
+  }
+}
