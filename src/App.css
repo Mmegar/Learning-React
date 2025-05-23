@@ -9,14 +9,17 @@ html, body {
   padding: 0;
   height: 100vh;
   overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-y: auto;
 }
 
 main {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  min-height: 100vh; /* ensure it fits screen height */
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 
 nav {
@@ -29,7 +32,8 @@ nav {
   border-radius: 1em;
   color: white; 
   gap: 0.1em;
-  white-space: nowrap;
+  white-space: nowrap; 
+  z-index: 1;
 }
 
 nav > a {
@@ -63,8 +67,6 @@ nav > a.active {
   font-size: clamp(20px, 3vw, 40px);
 }
 
-
-
 .maomao-background {
   position: absolute;
   bottom: 0;
@@ -90,18 +92,21 @@ nav > a.active {
 }
 
 .image-wrapper {
-  height: 200px; /* or whatever fits your largest image */
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 30vw;
+  height: 250px;
+  max-height: 250px;
   overflow: hidden;
-  margin-bottom: 2rem; /* add space below image */
-  transform:translate(0%, -15%) 
+  padding: 0.5rem;
+  box-sizing: border-box;
 }
+
 .imageSize {
-  max-height: 100%;
-  max-width: 100%;
+  width: 100%;
+  height: auto;
   object-fit: contain;
 }
 
@@ -136,6 +141,14 @@ nav > a.active {
     max-height: 70vh;
      max-width: 10000px;
   }
+
+  .image-wrapper {
+    height: auto; /* or whatever fits your largest image */
+    width: 50%; /* or whatever fits your largest image */
+    max-height: 180px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
 }
 
 /* iPad Mini, Air (Portrait) */
@@ -164,20 +177,53 @@ nav > a.active {
     max-height: 42vh;
     max-width: 10000px;
   }
+  .image-wrapper {
+    height: 300px; /* or whatever fits your largest image */
+    width: 70%; /* or whatever fits your largest image */
+    max-height: 180px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
 }
+
 
 /* Phones (portrait) */
 
 /* Most phones (iPhone 12, Androids, etc.) */
-@media (max-width: 430px) {
+@media (max-width: 430px) and (orientation: landscape)  {
   .image-wrapper {
     height: 200px; /* or whatever fits your largest image */
     width: 80vw; /* or whatever fits your largest image */
+    max-height: 180px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
-  .subtitle{
+
+  .subtitle {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
     transform: translate(0,0);
   }
 }
+
+ 
+
+  @media (max-width: 667px) {
+  .maomao-background,
+  .jinshi-background {
+    width: 50vw;
+    max-height: 42vh;
+    max-width: 10000px;
+  }
+
+  .image-wrapper {
+    height: 200px; /* or whatever fits your largest image */
+    width: 80vw; /* or whatever fits your largest image */
+    max-height: 180px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  }
   
   /* Bigger phones or small tablets in portrait */
   @media (max-width: 480px) {
@@ -210,6 +256,6 @@ nav > a.active {
     width: 80vw; /* or whatever fits your largest image */
   }
   .subtitle{
-    transform: translate(-10%,0);
+    transform: translate(-17%,0);
   }
   }

@@ -6,10 +6,11 @@ import './App.css'
 import Home from './home'
 import ExtendedNav from './extendednav.jsx'
 
+
+
 function App() {
   const location = useLocation(); 
-  
-  let isValentine_page = location.pathname == "./valentine"
+  let isValentine_page = location.pathname === "./valentine"
 
   return (
     <>

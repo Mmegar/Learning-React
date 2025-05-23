@@ -9,17 +9,27 @@ import maomaoPlease from "./assets/maomoaPlease.webp"
 import maomaoSad from "./assets/maomaoSad.webp" 
 import jinshiCry from "./assets/jinshiCry.webp"
 
-
+function preloadImages(imageArray) {
+  return Promise.all(
+    imageArray.map((src) => {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.src = src;
+        img.onload = resolve;
+        img.onerror = reject;
+      });
+    })
+  );
+}
 
 
 function ProjectValentine() {
 
     useEffect(() => {
         // Preload images
-        [maomaoSad, maomaoPlease, jinshiCry].forEach((src) => {
-            const img = new Image();
-            img.src = src;
-        });
+        preloadImages([maomaoSad, maomaoPlease, jinshiCry])
+        .then(() => console.log("✅ Images preloaded"))
+        .catch(err => console.error("❌ Preload error", err));
 
         // Set up background and text color
         document.body.style.backgroundColor = "#FBF7F5";

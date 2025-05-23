@@ -1,38 +1,44 @@
 .buttonRow {
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  user-select: none;
-  margin-top: 2rem;
-  user-select: none;
-  text-align: center;
+  align-items: center;
+  flex-wrap: wrap;       /* wrap to next line if too narrow */
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  padding: 0 1rem;        /* prevent edge clipping */
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 2;
+}
 
+.yesBtn, .noBtn {
+  padding: 12px 16px;
+  width: 42vw;              /* scales on smaller screens */
+  max-width: 160px;         /* never goes too wide */
+  min-width: 120px;         /* doesn’t collapse */
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  z-index: 2;
 }
 
 .yesBtn {
   background-color: green;
   color: white;
-  padding: 10px;
-  width: 150px;
-  height: 50px;
-  font-size: 1.1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-z-index: 1;
-  text-align: center;
 }
 
 .noBtn {
   background-color: red;
   color: white;
-  padding: 10px;
-z-index: 1;
-  width: 150px;
-  height: 50px;
-  font-size: 1.1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-    text-align: center
 }
+
+@media (max-width: 360px) {
+  .yesBtn, .noBtn {
+    font-size: 0.95rem;
+    padding: 10px 12px;
+    width: 44vw;
+      margin-top: 0;
+  }
+} 
